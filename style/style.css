@@ -289,6 +289,13 @@ button:hover{
     .logro :first-child, .titulo :first-child {
         order: -2;
     }
+
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        column-gap: 30px;
+    }
 }
 
 @media(width <= 640px){
