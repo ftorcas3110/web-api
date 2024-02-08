@@ -275,11 +275,11 @@ button:hover{
         place-items: center;
     }
 
-    #coco{
-        padding-right:50%;        
-        place-items: center;
-        padding-left: 70%;
-        overflow: hidden;
+    #coco{     
+        padding-right: 80%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .logro, .titulo {
@@ -314,10 +314,10 @@ button:hover{
 @media(width <= 640px){
 
     #coco{
-        padding-right:50%;
-        place-items: center;
-        padding-left: 70%;
-        overflow: hidden;
+        padding-right: 80%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     #cuerpo {
