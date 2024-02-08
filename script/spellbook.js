@@ -61,7 +61,7 @@ window.onload = (function () {
 })
 
 let nombreTitulo = document.getElementById("buscarTituloNombre");
-let borrarTitulos = document.getElementsByClassName("spellbook");
+let borrarTitulos = document.getElementsByClassName("titulo");
 
 //Spellbook de BLU, botón muestra spell por id
 
@@ -76,17 +76,14 @@ botonTitulo.addEventListener("click", function () {
         contenedorContenido.className = "titulo";
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
-        contenidoDesc.innerHTML = `${element.name}`
+        contenidoDesc.innerHTML = `#${element.order} ${element.name}`
         contenidoOwnership.innerHTML = `${element.owned}`
-        numeroSpell.innerHTML = `#${element.order}`
 
-        contenedorContenido.appendChild(numeroSpell);
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoDesc);
         contenedorContenido.appendChild(contenidoNombre);        
         contenedorContenido.appendChild(contenidoOwnership);
 
-        numeroSpell = document.createElement("p");
         imagenContenido = document.createElement("img");
         contenidoNombre = document.createElement("p");
         contenidoDesc = document.createElement("p");
@@ -104,7 +101,7 @@ let botonSpell = document.getElementById("botonSpell")
 
 botonSpell.addEventListener("click", function () {
       limpiarLista(borrarTitulos)
-      fetch(`https://ffxivcollect.com/api/spells?name_${idioma}_cont=${nombreTitulo.value}`, requestOptions)
+      fetch(`https://ffxivcollect.com/api/spells?name_${idioma}_cont=${nombreTitulo.value}&language=${idioma}`, requestOptions)
       .then(response => response.json())
       .then((data) => {
         data.results.forEach((element) => {
@@ -113,17 +110,15 @@ botonSpell.addEventListener("click", function () {
           contenedorContenido.className = "titulo";
           imagenContenido.src = element.icon
           contenidoNombre.innerHTML = `${element.sources[0].text}`
-          contenidoDesc.innerHTML = `${element.name}`
+          contenidoDesc.innerHTML = `#${element.order} ${element.name}`
           contenidoOwnership.innerHTML = `${element.owned}`
           numeroSpell.innerHTML = `#${element.order}`
   
-          contenedorContenido.appendChild(numeroSpell);
           contenedorContenido.appendChild(imagenContenido);
           contenedorContenido.appendChild(contenidoDesc);
           contenedorContenido.appendChild(contenidoNombre);        
           contenedorContenido.appendChild(contenidoOwnership);
   
-          numeroSpell = document.createElement("p");
           imagenContenido = document.createElement("img");
           contenidoNombre = document.createElement("p");
           contenidoDesc = document.createElement("p");
