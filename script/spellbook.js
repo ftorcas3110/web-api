@@ -27,7 +27,6 @@ let contenidoNombre = document.createElement("p");
 let imagenContenido = document.createElement("img");
 let contenidoDesc = document.createElement("p");
 let contenidoOwnership = document.createElement("p");
-listaTitulos[0].appendChild(contenedorContenido);
 
 window.onload = (function () {
   fetch(`https://ffxivcollect.com/api/spells?language=${idioma}`, requestOptions)
@@ -38,7 +37,7 @@ window.onload = (function () {
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
 
-        contenedorContenido.className = "titulo";
+        contenedorContenido.className = "spellbook";
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
         contenidoDesc.innerHTML = `${element.name}`
@@ -68,20 +67,17 @@ window.onload = (function () {
 let nombreTitulo = document.getElementById("buscarTituloNombre");
 let borrarTitulos = document.getElementsByClassName("titulo");
 
-let arreglar = 0;
-
 //Spellbook de BLU, botón muestra spell por id
 
 botonTitulo.addEventListener("click", function () {
   limpiarLista(borrarTitulos)
-    limpiarLista(borrarTitulos)
     fetch(`https://ffxivcollect.com/api/spells?order_eq=${nombreTitulo.value}&language=${idioma}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
-        contenedorContenido.className = "titulo";
+        contenedorContenido.className = "spellbook";
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
         contenidoDesc.innerHTML = `${element.name}`
@@ -111,7 +107,6 @@ botonTitulo.addEventListener("click", function () {
 let botonSpell = document.getElementById("botonSpell")
 
 botonSpell.addEventListener("click", function () {
-    limpiarLista(borrarTitulos)
       limpiarLista(borrarTitulos)
       fetch(`https://ffxivcollect.com/api/spells?name_${idioma}_cont=${nombreTitulo.value}`, requestOptions)
       .then(response => response.json())
@@ -120,7 +115,7 @@ botonSpell.addEventListener("click", function () {
           listaTitulos[0].appendChild(contenedorContenido);
           contenedor = document.getElementsByClassName("contenedorLogros");
           contenedorContenido = document.createElement("div");
-          contenedorContenido.className = "titulo";
+          contenedorContenido.className = "spellbook";
           imagenContenido.src = element.icon
           contenidoNombre.innerHTML = `${element.sources[0].text}`
           contenidoDesc.innerHTML = `${element.name}`

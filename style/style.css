@@ -185,15 +185,15 @@ header img {
     margin-bottom: 30px;
 }
 
-.logro:nth-child(odd), .titulo:nth-child(odd){
+.logro:nth-child(odd), .titulo:nth-child(odd), .spellbook:nth-child(odd){
     background-color: #111110;
 }
 
-.logro:nth-child(even), .titulo:nth-child(even){
+.logro:nth-child(even), .titulo:nth-child(even), .spellbook:nth-child(even){
     background-color: #31313162;
 }
 
-.lista img, .listaTitulos img {
+.lista img, .listaTitulos img .spellbook img{
     display: flex;
     align-self: center;
     width: 40px;
@@ -212,13 +212,27 @@ header img {
     align-items: center;
     height: 60px;
     justify-content: space-between;
+    gap: 15vw;
     padding: 0 1%;
     margin-right: 10px;
     margin-left: 10px;
     border-radius: 15px;
 }
 
-.logro a, .titulo a {
+.spellbook {
+    grid-column: 1 / 1; 
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+    gap: 20vw;
+    padding: 0 1%;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+.logro a, .titulo a, .spellbook a {
     color:white;
     text-decoration: underline;
 }
