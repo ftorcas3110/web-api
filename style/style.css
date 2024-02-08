@@ -273,7 +273,10 @@ button:hover{
     #cuerpo {
         grid-template-columns: 1fr;
         min-height: auto;
-        grid-column-start: -1;
+    }
+
+    #coco{
+        padding-right:50%;
     }
 
     .logro, .titulo {
@@ -310,9 +313,8 @@ button:hover{
     #cuerpo {
         grid-template-columns: 1fr;
         min-height: auto;
-        grid-column-start: -1;
     }
-    
+
     .logro, .titulo {
         grid-template-columns: 1fr;
         padding-top: 20px;
