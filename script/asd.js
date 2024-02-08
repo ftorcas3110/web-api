@@ -20,12 +20,12 @@ let info = document.getElementById("caracteristicasCoco");
 
 
 
-fetch(`https://ffxivcollect.com/api/characters/12336958?language=${idioma}`, requestOptions)
+fetch(`https://ffxivcollect.com/api/characters/38104305?language=${idioma}`, requestOptions)
   .then(response => response.json())
   .then(result => imagen.innerHTML = `<img src=${result.portrait}>`)
   .catch(error => console.log('error', error));
-//38104305
-fetch(`https://ffxivcollect.com/api/characters/12336958?language=${idioma}`, requestOptions)
+
+fetch(`https://ffxivcollect.com/api/characters/38104305?language=${idioma}`, requestOptions)
   .then(response => response.json())
   .then(result => info.children[0].innerHTML = `My character name is ${result.name} from ${result.server}, in ${result.data_center}. Feel free to reach out to me for any questions`)
   .catch(error => console.log('error', error));
