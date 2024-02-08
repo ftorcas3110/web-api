@@ -40,7 +40,7 @@ window.onload = (function () {
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
         contenidoDesc.innerHTML = `#${element.order} ${element.name}`
-        contenidoOwnership.innerHTML = `${element.owned}`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
 
 
@@ -77,7 +77,7 @@ botonTitulo.addEventListener("click", function () {
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
         contenidoDesc.innerHTML = `#${element.order} ${element.name}`
-        contenidoOwnership.innerHTML = `${element.owned}`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoDesc);
@@ -111,7 +111,7 @@ botonSpell.addEventListener("click", function () {
           imagenContenido.src = element.icon
           contenidoNombre.innerHTML = `${element.sources[0].text}`
           contenidoDesc.innerHTML = `#${element.order} ${element.name}`
-          contenidoOwnership.innerHTML = `${element.owned}`
+          contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
   
           contenedorContenido.appendChild(imagenContenido);
           contenedorContenido.appendChild(contenidoDesc);
