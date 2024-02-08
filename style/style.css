@@ -269,6 +269,18 @@ button:hover{
 
 
 @media(width <= 1024px){
+
+    #cuerpo {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    #coco {
+        aspect-ratio: 1;
+        min-height: auto;
+        
+    }
+
     .logro, .titulo {
         grid-template-columns: repeat(2, 1fr);
         height: 100px;
