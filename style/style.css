@@ -1,0 +1,250 @@
+body {
+    background-color: #1f1e1d;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+header {
+    border-bottom: 3px solid white;
+    margin: 0 auto;
+    background-color: #1f1e1d;
+    margin-bottom: 20px;
+    position: sticky;
+    top : 0;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    min-height: 95%;
+}
+
+footer a {
+    color: red;
+}
+
+footer a:visited{
+    color: red;
+}
+
+#flex-wrapper {
+    display: flex;
+    min-height: 90.5vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#cuerpo {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 2;    
+    padding: 20px;
+}
+
+.about a {
+    color: red;
+
+}
+
+.about a:visited {
+    color: red;
+}
+
+#coco {
+    grid-column: 2 / 2;
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#caracteristicasCoco {
+    border-top: 3px solid rgb(138, 11, 11);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content p {
+    color:black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color:black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.banderas{
+    display: grid;
+    min-height: 6vh;
+    place-content: left;
+}
+
+#banderaIngles{
+    background-image: url(/assets/gb.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+#banderaFrances{
+    background-image: url(/assets/fr.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+#banderaAleman{
+    background-image: url(/assets/de.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+#banderaJapones{
+    background-image: url(/assets/jp.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+.banderas hr{
+    width: 100%;
+}
+
+.lista, .listaTitulos {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.logro:nth-child(odd), .titulo:nth-child(odd){
+    background-color: #111110;
+}
+
+.logro:nth-child(even), .titulo:nth-child(even){
+    background-color: #31313162;
+}
+
+.lista img, .listaTitulos img {
+    display: flex;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    padding-right: 25px;
+}
+
+.contenedorLogros {
+    display: flex;
+    justify-content: left;
+}
+
+.logro, .titulo {
+    grid-column: 1 / 1; 
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 1%;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+.logro a, .titulo a {
+    color:white;
+    text-decoration: underline;
+}
+
+.inputLogro {
+    align-self: center;
+}
+
+input {
+    background-color: #31313162;
+    border: 2px solid black;
+    color: white;
+    border-radius: 20px;
+}
+
+input::placeholder{
+    color:white;
+}
+
+button {
+    background-color: rgb(138, 11, 11);
+    color: white;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+button:hover{
+    cursor: pointer;
+}
