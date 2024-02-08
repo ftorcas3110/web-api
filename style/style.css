@@ -310,6 +310,10 @@ button:hover{
 
 @media(width <= 640px){
 
+    #coco{
+        padding-right:50%;
+    }
+
     #cuerpo {
         grid-template-columns: 1fr;
         min-height: auto;
