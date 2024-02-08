@@ -272,11 +272,13 @@ button:hover{
 
     #cuerpo {
         grid-template-columns: 1fr;
-        min-height: auto;
+        place-items: center;
     }
 
     #coco{
-        padding-right:50%;
+        padding-right:50%;        
+        place-items: center;
+        padding-left: 70%;
     }
 
     .logro, .titulo {
@@ -312,8 +314,8 @@ button:hover{
 
     #coco{
         padding-right:50%;
-        width: fit-content;
-        overflow: hidden;
+        place-items: center;
+        padding-left: 70%;
     }
 
     #cuerpo {
