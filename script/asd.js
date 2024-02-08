@@ -43,7 +43,6 @@ let imagenContenido = document.createElement("img");
 let contenidoNombre = document.createElement("a");
 let contenidoDesc = document.createElement("p");
 let contenidoOwnership = document.createElement("p");
-lista[0].appendChild(contenedorContenido);
 
 window.onload = (function () {
   fetch(`https://ffxivcollect.com/api/achievements?language=${idioma}&limit=30`, requestOptions)
