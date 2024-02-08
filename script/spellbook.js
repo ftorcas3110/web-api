@@ -73,7 +73,7 @@ botonTitulo.addEventListener("click", function () {
       data.results.forEach((element) => {
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
-        contenedorContenido.className = "spellbook";
+        contenedorContenido.className = "titulo";
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
         contenidoDesc.innerHTML = `${element.name}`
@@ -110,7 +110,7 @@ botonSpell.addEventListener("click", function () {
         data.results.forEach((element) => {
           contenedor = document.getElementsByClassName("contenedorLogros");
           contenedorContenido = document.createElement("div");
-          contenedorContenido.className = "spellbook";
+          contenedorContenido.className = "titulo";
           imagenContenido.src = element.icon
           contenidoNombre.innerHTML = `${element.sources[0].text}`
           contenidoDesc.innerHTML = `${element.name}`
