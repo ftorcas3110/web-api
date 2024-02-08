@@ -65,7 +65,7 @@ window.onload = (function () {
 })
 
 let nombreTitulo = document.getElementById("buscarTituloNombre");
-let borrarTitulos = document.getElementsByClassName("titulo");
+let borrarTitulos = document.getElementsByClassName("spellbook");
 
 //Spellbook de BLU, botón muestra spell por id
 
@@ -112,7 +112,6 @@ botonSpell.addEventListener("click", function () {
       .then(response => response.json())
       .then((data) => {
         data.results.forEach((element) => {
-          listaTitulos[0].appendChild(contenedorContenido);
           contenedor = document.getElementsByClassName("contenedorLogros");
           contenedorContenido = document.createElement("div");
           contenedorContenido.className = "spellbook";
@@ -133,6 +132,8 @@ botonSpell.addEventListener("click", function () {
           contenidoNombre = document.createElement("p");
           contenidoDesc = document.createElement("p");
           contenidoOwnership = document.createElement("p");
+          
+          listaTitulos[0].appendChild(contenedorContenido);
   
         });
       })
