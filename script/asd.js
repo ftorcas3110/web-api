@@ -56,8 +56,8 @@ window.onload = (function () {
         contenidoNombre.href = `https://www.garlandtools.org/db/#achievement/${element.id}`
         contenidoNombre.target = "_blank"
         contenidoNombre.innerHTML = element.name
-        contenidoDesc.innerHTML = `<p>${element.description}</p>`
-        contenidoOwnership.innerHTML = `<p>${element.owned}</p>`
+        contenidoDesc.innerHTML = `${element.description}`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoNombre);
@@ -96,7 +96,7 @@ botonLogro.addEventListener("click", function () {
         contenidoNombre.target = "_blank"
         contenidoNombre.innerHTML = element.name
         contenidoDesc.innerHTML = `${element.description}`
-        contenidoOwnership.innerHTML = `${element.owned}`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoNombre);

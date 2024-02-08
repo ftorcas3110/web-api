@@ -198,7 +198,6 @@ header img {
     align-self: center;
     width: 40px;
     height: 40px;
-    padding-right: 25px;
 }
 
 .contenedorLogros {
@@ -207,34 +206,37 @@ header img {
 }
 
 .logro, .titulo {
-    grid-column: 1 / 1; 
-    display: flex;
     align-items: center;
-    height: 60px;
-    justify-content: space-between;
-    gap: 20vw;
-    padding: 0 1%;
     margin-right: 10px;
     margin-left: 10px;
     border-radius: 15px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 30px;
 }
 
-.spellbook {
-    grid-column: 1 / 1; 
-    display: flex;
-    align-items: center;
-    height: 80px;
-    justify-content: space-between;
-    gap: 20vw;
-    padding: 0 1%;
-    margin-right: 10px;
-    margin-left: 10px;
-    border-radius: 15px;
+.logro :first-child, .titulo :first-child {
+    padding-right: 70%;
+}
+
+.logro :last-child, .titulo :last-child {
+    padding-left: 70%;
 }
 
 .logro a, .titulo a, .spellbook a {
     color:white;
+    align-self: center;
     text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.logro a:hover, .titulo a:hover, .spellbook a:hover {
+    color:rgb(138, 11, 11);
+    align-self: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .inputLogro {
@@ -246,6 +248,7 @@ input {
     border: 2px solid black;
     color: white;
     border-radius: 20px;
+    padding: 10px;
 }
 
 input::placeholder{
@@ -255,10 +258,51 @@ input::placeholder{
 button {
     background-color: rgb(138, 11, 11);
     color: white;
+    padding:10px;
     border-radius: 20px;
     border: 2px solid black;
 }
 
 button:hover{
     cursor: pointer;
+}
+
+
+@media(width <= 1024px){
+    .logro, .titulo {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100px;
+    }
+
+    .logro :first-child, .titulo :first-child {
+        padding-right: 0;
+    }
+    
+    .logro :last-child, .titulo :last-child {
+        padding-left: 0;
+    }
+
+    .logro :last-child, .titulo :last-child {
+        order: -1;
+    }
+
+    .logro :first-child, .titulo :first-child {
+        order: -2;
+    }
+}
+
+@media(width <= 640px){
+    .logro, .titulo {
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+        height: auto;
+    }
+
+    .logro :first-child, .titulo :first-child {
+        padding-right: 0;
+    }
+    
+    .logro :last-child, .titulo :last-child {
+        padding-left: 0;
+    }
 }

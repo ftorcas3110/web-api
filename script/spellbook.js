@@ -22,7 +22,6 @@ let botonTitulo = document.getElementById("botonTitulo");
 let contenedorContenido = document.createElement("div");
 let contenedor;
 
-let numeroSpell = document.createElement("p");
 let contenidoNombre = document.createElement("p");
 let imagenContenido = document.createElement("img");
 let contenidoDesc = document.createElement("p");
@@ -37,22 +36,19 @@ window.onload = (function () {
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
 
-        contenedorContenido.className = "spellbook";
+        contenedorContenido.className = "titulo";
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
-        contenidoDesc.innerHTML = `${element.name}`
+        contenidoDesc.innerHTML = `#${element.order} ${element.name}`
         contenidoOwnership.innerHTML = `${element.owned}`
-        numeroSpell.innerHTML = `#${element.order}`
 
 
 
-        contenedorContenido.appendChild(numeroSpell);
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoDesc);
         contenedorContenido.appendChild(contenidoNombre);        
         contenedorContenido.appendChild(contenidoOwnership);
 
-        numeroSpell = document.createElement("p");
         imagenContenido = document.createElement("img");
         contenidoNombre = document.createElement("p");
         contenidoDesc = document.createElement("p");

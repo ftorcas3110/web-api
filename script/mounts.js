@@ -38,7 +38,7 @@ window.onload = (function () {
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
         contenidoDesc.innerHTML = `${element.name}`
-        contenidoOwnership.innerHTML = `${element.owned}`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoDesc);
@@ -75,7 +75,7 @@ botonTitulo.addEventListener("click", function () {
         imagenContenido.src = element.icon
         contenidoNombre.innerHTML = `${element.sources[0].text}`
         contenidoDesc.innerHTML = `${element.name}`
-        contenidoOwnership.innerHTML = `${element.owned}`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoDesc);

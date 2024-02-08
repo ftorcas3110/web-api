@@ -40,7 +40,7 @@ window.onload = (function () {
         contenidoNombre.target = "_blank"
         contenidoNombre.innerHTML = `${element.achievement.name}`
         contenidoDesc.innerHTML = `♂ ${element.name} / ⧬ ${element.female_name}`
-        contenidoOwnership.innerHTML = `${element.owned}`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoNombre);
@@ -78,7 +78,7 @@ botonTitulo.addEventListener("click", function () {
         contenidoNombre.target = "_blank"
         contenidoNombre.innerHTML = `${element.achievement.name}`
         contenidoDesc.innerHTML = `♂ ${element.name} / ⧬ ${element.female_name}`
-        contenidoOwnership.innerHTML = `<p>${element.owned}</p>`
+        contenidoOwnership.innerHTML = `Ownership: ${element.owned}`
 
         contenedorContenido.appendChild(imagenContenido);
         contenedorContenido.appendChild(contenidoNombre);
