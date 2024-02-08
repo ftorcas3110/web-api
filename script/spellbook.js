@@ -27,13 +27,14 @@ let contenidoNombre = document.createElement("p");
 let imagenContenido = document.createElement("img");
 let contenidoDesc = document.createElement("p");
 let contenidoOwnership = document.createElement("p");
+listaTitulos[0].appendChild(contenedorContenido);
 
 window.onload = (function () {
   fetch(`https://ffxivcollect.com/api/spells?language=${idioma}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
-        listaTitulos[0].appendChild(contenedorContenido);
+        
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
 
@@ -57,6 +58,7 @@ window.onload = (function () {
         contenidoNombre = document.createElement("p");
         contenidoDesc = document.createElement("p");
         contenidoOwnership = document.createElement("p");
+        listaTitulos[0].appendChild(contenedorContenido);
 
       });
     })
@@ -72,16 +74,11 @@ let arreglar = 0;
 
 botonTitulo.addEventListener("click", function () {
   limpiarLista(borrarTitulos)
-  let intervaloArreglo = setInterval(() => {
-    if (arreglar >= 2) {
-      clearInterval(intervaloArreglo);
-    } else {  
     limpiarLista(borrarTitulos)
     fetch(`https://ffxivcollect.com/api/spells?order_eq=${nombreTitulo.value}&language=${idioma}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
-        listaTitulos[0].appendChild(contenedorContenido);
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
         contenedorContenido.className = "titulo";
@@ -102,13 +99,10 @@ botonTitulo.addEventListener("click", function () {
         contenidoNombre = document.createElement("p");
         contenidoDesc = document.createElement("p");
         contenidoOwnership = document.createElement("p");
-
+        listaTitulos[0].appendChild(contenedorContenido);
       });
     })
     .catch(error => console.log('error', error));
-    arreglar++;
-  }
-  }, 1000);
   arreglar = 0;
 })
 
@@ -118,10 +112,6 @@ let botonSpell = document.getElementById("botonSpell")
 
 botonSpell.addEventListener("click", function () {
     limpiarLista(borrarTitulos)
-    let intervaloArreglo = setInterval(() => {
-      if (arreglar >= 2) {
-        clearInterval(intervaloArreglo);
-      } else {  
       limpiarLista(borrarTitulos)
       fetch(`https://ffxivcollect.com/api/spells?name_${idioma}_cont=${nombreTitulo.value}`, requestOptions)
       .then(response => response.json())
@@ -152,10 +142,6 @@ botonSpell.addEventListener("click", function () {
         });
       })
       .catch(error => console.log('error', error));
-      arreglar++;
-    }
-    }, 1000);
-    arreglar = 0;
   })
 
 

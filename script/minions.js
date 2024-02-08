@@ -32,7 +32,6 @@ window.onload = (function () {
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
-        listaTitulos[0].appendChild(contenedorContenido);
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
         contenedorContenido.className = "titulo";
@@ -50,6 +49,7 @@ window.onload = (function () {
         contenidoNombre = document.createElement("p");
         contenidoDesc = document.createElement("p");
         contenidoOwnership = document.createElement("p");
+        listaTitulos[0].appendChild(contenedorContenido);
 
       });
     })
@@ -64,17 +64,12 @@ let arreglar = 0;
 //Minions, botón muestra titulo
 
 botonTitulo.addEventListener("click", function () {
-  limpiarLista(borrarTitulos)
-  let intervaloArreglo = setInterval(() => {
-    if (arreglar >= 2) {
-      clearInterval(intervaloArreglo);
-    } else {  
     limpiarLista(borrarTitulos)
     fetch(`https://ffxivcollect.com/api/minions?name_${idioma}_cont=${nombreTitulo.value}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
-        listaTitulos[0].appendChild(contenedorContenido);
+        
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
         contenedorContenido.className = "titulo";
@@ -92,13 +87,11 @@ botonTitulo.addEventListener("click", function () {
         contenidoNombre = document.createElement("p");
         contenidoDesc = document.createElement("p");
         contenidoOwnership = document.createElement("p");
+        listaTitulos[0].appendChild(contenedorContenido);
 
       });
     })
     .catch(error => console.log('error', error));
-    arreglar++;
-  }
-  }, 1000);
   arreglar = 0;
 })
 

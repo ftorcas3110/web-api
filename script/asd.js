@@ -43,13 +43,13 @@ let imagenContenido = document.createElement("img");
 let contenidoNombre = document.createElement("a");
 let contenidoDesc = document.createElement("p");
 let contenidoOwnership = document.createElement("p");
+lista[0].appendChild(contenedorContenido);
 
 window.onload = (function () {
   fetch(`https://ffxivcollect.com/api/achievements?language=${idioma}&limit=30`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
-        lista[0].appendChild(contenedorContenido);
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
         contenedorContenido.className = "logro";
@@ -69,6 +69,7 @@ window.onload = (function () {
         contenidoNombre = document.createElement("a");
         contenidoDesc = document.createElement("p");
         contenidoOwnership = document.createElement("p");
+        lista[0].appendChild(contenedorContenido);
 
       });
     })
@@ -83,17 +84,11 @@ let arreglar = 0;
 //Logros, botón muestra logro
 
 botonLogro.addEventListener("click", function () {
-  limpiarLista(borrarLogros)
-  let intervaloArreglo = setInterval(() => {
-    if (arreglar >= 2) {
-      clearInterval(intervaloArreglo);
-    } else {  
     limpiarLista(borrarLogros)
     fetch(`https://ffxivcollect.com/api/achievements?name_${idioma}_cont=${nombreLogro.value}&description_${idioma}_cont=${descripcionLogro.value}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
-        lista[0].appendChild(contenedorContenido);
         contenedor = document.getElementsByClassName("contenedorLogros");
         contenedorContenido = document.createElement("div");
         contenedorContenido.className = "logro";
@@ -113,13 +108,11 @@ botonLogro.addEventListener("click", function () {
         contenidoNombre = document.createElement("a");
         contenidoDesc = document.createElement("p");
         contenidoOwnership = document.createElement("p");
+        lista[0].appendChild(contenedorContenido);
       })
     })
     .catch(error => console.log('error', error));
     arreglar++;
-  }
-  }, 1000);
-  arreglar = 0;
 })
 
 
