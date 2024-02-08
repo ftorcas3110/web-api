@@ -306,6 +306,13 @@ button:hover{
 }
 
 @media(width <= 640px){
+
+    #cuerpo {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        grid-column-start: -1;
+    }
+    
     .logro, .titulo {
         grid-template-columns: 1fr;
         padding-top: 20px;
