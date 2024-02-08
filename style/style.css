@@ -318,13 +318,11 @@ button:hover{
         grid-template-columns: 1fr;
         min-height: auto;
     }
-
     #coco{
         margin-left: -45%;
         padding-right: 45%;
         height: 100%;
         max-width: 100%;
-        overflow: hidden;
     }
 
     .logro, .titulo {
