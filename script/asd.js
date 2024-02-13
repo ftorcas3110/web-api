@@ -84,7 +84,7 @@ let arreglar = 0;
 
 botonLogro.addEventListener("click", function () {
     limpiarLista(borrarLogros)
-    fetch(`https://ffxivcollect.com/api/achievements?language=${idioma}&name_${idioma}_cont=${nombreLogro.value}&description_${idioma}cont=${descripcionLogro.value}`, requestOptions)
+    fetch(`https://ffxivcollect.com/api/achievements?language=${idioma}&name_${idioma}_cont=${nombreLogro.value}&description_${idioma}_cont=${descripcionLogro.value}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
