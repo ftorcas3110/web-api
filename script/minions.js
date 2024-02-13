@@ -65,7 +65,7 @@ let arreglar = 0;
 
 botonTitulo.addEventListener("click", function () {
     limpiarLista(borrarTitulos)
-    fetch(`https://ffxivcollect.com/api/minions?name_${idioma}_cont=${nombreTitulo.value}`, requestOptions)
+    fetch(`https://ffxivcollect.com/api/minions?name_cont=${nombreTitulo.value}&language=${idioma}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
