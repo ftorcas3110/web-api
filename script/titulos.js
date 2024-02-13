@@ -66,7 +66,7 @@ let arreglar = 0;
 
 botonTitulo.addEventListener("click", function () {
     limpiarLista(borrarTitulos)
-    fetch(`https://ffxivcollect.com/api/titles?name_or_female_name_cont=${nombreTitulo.value}&language=${idioma}`, requestOptions)
+    fetch(`https://ffxivcollect.com/api/titles?language=${idioma}&name_${idioma}_or_female_name_${idioma}_cont=${nombreTitulo.value}`, requestOptions)
     .then(response => response.json())
     .then((data) => {
       data.results.forEach((element) => {
